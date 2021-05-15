@@ -15,11 +15,11 @@ import br.com.caelum.ingresso.model.Sessao;
 public class SessaoForm {
 	@NotNull
 	private Integer salaId;
-	
+
 	@DateTimeFormat(pattern = "HH:mm")
 	@NotNull
 	private LocalTime horario;
-	
+
 	@NotNull
 	private Integer filmeId;
 
@@ -33,7 +33,25 @@ public class SessaoForm {
 	public Integer getSalaId() {
 		return this.salaId;
 	}
-	public void setSalaId (Integer salaId) {
+
+	public void setSalaId(Integer salaId) {
 		this.salaId = salaId;
-	} 
+	}
+
+	public LocalTime getHorario() {
+		return horario;
+	}
+
+	public void setHorario(LocalTime horario) {
+		this.horario = horario;
+	}
+
+	public Integer getFilmeId() {
+		return filmeId;
+	}
+
+	public void setFilmeId(Integer filmeId) {
+		this.filmeId = filmeId;
+	}
+
 }
