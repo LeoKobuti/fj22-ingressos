@@ -48,14 +48,6 @@ public class GerenciadorDeSessaoTest {
 	}
 
 	@Test
-	public void garanteQueNaoDevePermitirSessoesIniciandoDentroDoHorarioDeUmaSessaoJaExistente() {
-		List<Sessao> sessoes = Arrays.asList(sessaoDasDez);
-		GerenciadorDeSessao gerenciador = new GerenciadorDeSessao(sessoes);
-		Sessao sessao = new Sessao(sessaoDasDez.getHorario().plusHours(1), rogueOne, sala3D);
-		Assert.assertFalse(gerenciador.cabe(sessao));
-	}
-
-	@Test
 	public void garanteQueDevePermitirUmaInsercaoEntreDoisFilmes() {
 		List<Sessao> sessoes = Arrays.asList(sessaoDasDez, sessaoDasDezoito);
 		GerenciadorDeSessao gerenciador = new GerenciadorDeSessao(sessoes);
@@ -70,4 +62,4 @@ public class GerenciadorDeSessaoTest {
 		Assert.assertFalse(gerenciador.cabe(sessaoQueTerminaAmanha));
 	}
 }
-
+	
