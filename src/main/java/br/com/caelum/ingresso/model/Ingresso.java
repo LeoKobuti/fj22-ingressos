@@ -15,9 +15,9 @@ public class Ingresso {
 					this.sessao	=	sessao;
 					this.preco	=	tipoDeDesconto.aplicarDescontoSobre(sessao.getPreco());
 	}
-	public Ingresso(Sessao sessao2, SemDesconto tipoDeDesconto) {
+	/*public Ingresso(Sessao sessao2, SemDesconto tipoDeDesconto) {
 		// TODO Auto-generated constructor stub
-	}
+	}*/
 	public	BigDecimal	getPreco() {
 					return	preco.setScale(2,	RoundingMode.HALF_UP);
 	}
